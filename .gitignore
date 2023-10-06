@@ -1,0 +1,14 @@
+node_modules
+out
+.DS_Store
+release
+**/*.css
+**/*.css.map
+
+dist/**/*
+dist
+.vscode/
+.idea/
+proxies.json
+profiles.json
+settings.json

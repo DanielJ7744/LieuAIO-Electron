@@ -1,0 +1,219 @@
+@import 'variables';
+
+.Account {
+  height: calc(100% + 31px);
+  display: flex;
+  flex-direction: column;
+
+  .account__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #191818;
+    -webkit-app-region: drag;
+    height: 63px;
+
+    .AccountGroupText {
+      @include flexRowSpaceBetween();
+      width: calc(20% - 48px);
+      border-right: 2px solid #191818;
+      padding: 10px 12px 10px 25px;
+
+      .Texts {
+        display: flex;
+        flex-direction: column;
+        .Title {
+          @include font16();
+        }
+        .subTitle {
+          @include font12();
+        }
+      }
+
+      button {
+        background: #141414;
+        outline: none;
+        cursor: pointer;
+        border: none;
+        border-radius: 4px;
+        display: flex;
+        justify-content: center;
+        -webkit-app-region: no-drag;
+
+        img {
+          padding: 8px;
+        }
+      }
+    }
+
+    .accountContentText {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      padding-right: 15px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      align-items: center;
+
+      .account__content__left {
+        display: flex;
+        flex-direction: column;
+        padding-left: 25px;
+
+        .target {
+          @include font16();
+          color: white;
+        }
+      }
+
+      .account__content__right {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        -webkit-app-region: no-drag;
+        .windowsButton {
+          background: transparent !important;
+        }
+        button {
+          background: #141414;
+          border-radius: 4px;
+          display: flex;
+          justify-content: center;
+          border: none;
+          cursor: pointer;
+
+          img {
+            padding: 8px;
+          }
+        }
+      }
+    }
+  }
+
+  .Account__content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    .account__content {
+      border-right: 2px solid #191818;
+      height: 795px;
+      max-height: 100%;
+      overflow-y: scroll;
+      .accountGroup__content {
+        padding: 10px 19px 0 19px;
+        &:nth-child(1) {
+          padding: 15px 19px 0 19px;
+        }
+        .tasksGroup {
+          padding: 8px;
+          border-radius: 4px;
+          background: #141414;
+          cursor: pointer;
+
+          .groupHeader {
+            display: flex;
+            justify-content: space-between;
+            .targetLogo__header {
+              display: flex;
+              gap: 15px;
+              align-items: center;
+              margin-right: 108px;
+
+              .targetLogo {
+                img {
+                  display: flex;
+                  width: 26px;
+                  height: 26px;
+                  background: white;
+                  border-radius: 4px;
+                  padding: 6px;
+                }
+              }
+              .__taskGroup__header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .name {
+                  @include font13();
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+      .activeAccountGroup {
+        .tasksGroup {
+          background: $bgLightest;
+        }
+      }
+    }
+    .target {
+      flex: 1;
+      display: flex;
+      .target_content {
+        padding: 15px 19px;
+        .target_content__header {
+          display: grid;
+          grid-template-columns: 392px 532px 117px;
+          background: $bgLightest;
+          padding: 15px 15px 15px 27px;
+          border-radius: 4px;
+          span {
+            @include font14();
+            color: white;
+          }
+          .header__action {
+            padding-left: 14px;
+          }
+        }
+        .target_content__body {
+          padding-top: 18px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          height: 700px;
+          max-height: 100%;
+          overflow-y: scroll;
+          .task__item__content {
+            .task__item__body {
+              display: grid;
+              grid-template-columns: 392px 532px 133px;
+              align-items: center;
+              padding: 15px 15px 15px 27px;
+              background: #141414;
+              border-radius: 4px;
+              span {
+                @include font14();
+                color: white;
+              }
+              .content__add__Status {
+                color: #f4c765 !important;
+              }
+              .content__wait__Status {
+                color: white;
+              }
+              .content__checkout__Status {
+                color: #66e293;
+              }
+              .content__action {
+                @include flexRowCenter();
+                gap: 4px;
+                .startIcon {
+                  padding-left: 21px;
+                  border-left: 1px solid white;
+                }
+                img {
+                  cursor: pointer;
+                  width: 25px;
+                  height: 25px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

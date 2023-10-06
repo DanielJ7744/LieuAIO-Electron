@@ -1,0 +1,121 @@
+@import 'variables';
+
+.animation__wrapper {
+  overflow: hidden;
+  position: relative;
+  @include flexRowSpaceBetween();
+  padding: 4px 6px;
+  width: 100%;
+
+  &.small {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.task-animation {
+  background-image: url('../assets/task-inactive.png');
+  width: 14px;
+  height: 14px;
+  background-size: 100%, 100%;
+  background-repeat: no-repeat;
+}
+
+.analytics-animation {
+  width: 14px;
+  height: 14px;
+  background-size: 100%, 100%;
+  background-repeat: no-repeat;
+  background-image: url('../assets/home-inactive.svg');
+}
+
+.monitor-animation {
+  background-repeat: no-repeat;
+  background-image: url('../assets/monitor-inactive.svg');
+  width: 14px;
+  height: 14px;
+  background-size: 100%;
+}
+
+.profile-animation {
+  background-repeat: no-repeat;
+  background-image: url('../assets/profile-inactive.svg');
+  width: 14px;
+  height: 14px;
+  background-size: 100%;
+}
+
+.proxy-animation {
+  background-size: 100%, 100%;
+  background-repeat: no-repeat;
+  background-image: url('../assets/proxy-inactive.svg');
+  width: 14px;
+  height: 14px;
+}
+
+.settings-animation {
+  width: 14px;
+  height: 14px;
+  background-size: 100%, 100%;
+  background-repeat: no-repeat;
+  background-image: url('../assets/setting-inactive.svg');
+}
+
+.default {
+  background: #242428;
+  border-radius: 4px;
+  width: 28px;
+  height: 28px;
+  @include flexRow();
+  justify-content: center;
+}
+
+.active {
+  .animation__wrapper {
+    background: linear-gradient(182.29deg, #929292 0.01%, #878787 100%), linear-gradient(0deg, #1b1b1f, #1b1b1f);
+    border: 1px solid #19181d;
+    border-radius: 4px;
+  }
+
+  .sidebarTitle {
+    color: white !important;
+  }
+
+  .default {
+    background: #ffffff2b;
+  }
+
+  .analytics-animation {
+    background-repeat: no-repeat;
+    background-image: url('../assets/home.svg');
+  }
+
+  .task-animation {
+    background-image: url('../assets/task.png');
+    background-repeat: no-repeat;
+  }
+
+  .monitor-animation {
+    background-repeat: no-repeat;
+    background-image: url('../assets/monitor.svg');
+  }
+
+  .profile-animation {
+    background-repeat: no-repeat;
+    background-image: url('../assets/profile.svg');
+  }
+
+  .proxy-animation {
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    background-image: url('../assets/proxy.svg');
+  }
+
+  .settings-animation {
+    width: 14px;
+    height: 14px;
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    background-image: url('../assets/setting.svg');
+  }
+}

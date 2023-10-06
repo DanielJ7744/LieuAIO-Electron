@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+@font-face {
+  font-family: kredit;
+  src: url('https://pattern.kivan-works.com/fonts/kredit_front.ttf');
+}
+$inputtt: #373742;
+$bgMain: #1b1b1f;
+$borderBg: #19181d;
+$bgLight: #0d0c10;
+$bgLightest: #191818;
+$bgItemConent: #121215;
+$bgLightH: lighten($bgMain, 10%);
+$font-family: 'Montserrat', sans-serif;
+$card-font: 'kredit';
+$accent: #59bce4;
+$neutral: #6f7ead;
+$neutralBg: #1b2545;
+$placeholder: #4f5b7a;
+$unfocusedMenu: #ffffff0f;
+$blue: #82d5fd;
+$red: #ff3c5d;
+$green: #00f88b;
+$yellow: #ffde46;
+$gray: #787878;
+
+$blueGradient: linear-gradient(135deg, #13f1fc 0%, #0470dc 100%); // Amex
+$orangeGradient: linear-gradient(135deg, #f2d50f 0%, #da0641 100%); // Mastercarad
+$lightOrangeGradient: linear-gradient(135deg, #fad961 0%, #f76b1c 100%); // Discover
+$purpleGradient: linear-gradient(135deg, #ff57b9 0%, #a704fd 100%); // Visa
+$darkBlueGradient: linear-gradient(135deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 61, 255, 1) 100%); // Diners
+$jcbGradient: linear-gradient(135deg, rgba(0, 149, 64, 1) 0%, rgba(0, 105, 179, 1) 51%, rgba(226, 6, 19, 1) 100%); // JCB
+
+@mixin flexColumnCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexColumnTop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flexColumnSpaceBetween {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin flexRowCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexRowSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flexRow {
+  display: flex;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+  display: none;
+}
+//
+//::-webkit-scrollbar-track {
+//  background: $bgMain;
+//}
+//
+//::-webkit-scrollbar-thumb {
+//  background: lighten($bgMain, 10%);
+//  border-radius: 5px;
+//}
+
+@mixin fon10 {
+  font-family: 'Montserrat';
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+@mixin font12 {
+  font-family: $font-family;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+@mixin font13 {
+  font-family: $font-family;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+@mixin font14 {
+  font-family: $font-family;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 21px;
+  letter-spacing: 0em;
+}
+@mixin font16 {
+  font-family: $font-family;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+@mixin font24 {
+  font-family: $font-family;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+@mixin font11 {
+  font-family: $font-family;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 13px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+@mixin font9 {
+  font-family: $font-family;
+  font-size: 9px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 11px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+@mixin font10 {
+  font-family: $font-family;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+}

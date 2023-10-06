@@ -1,0 +1,353 @@
+@import 'variables';
+
+.Setting {
+  display: flex;
+  flex-direction: column;
+  padding: 17px 29px 0 33px;
+  gap: 18px;
+
+  .setting__header {
+    background: url('../assets/settingBg.png') no-repeat;
+    background-size: cover;
+    display: flex;
+    padding: 18px 0 0 39px;
+
+    .UserSettingGroup {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      .userSetting {
+        color: white;
+        @include font14();
+      }
+
+      .useSettingContent {
+        background: #ffffff;
+        border-radius: 5px 5px 0px 0px;
+        padding: 29px 32px;
+        width: 342px;
+        @include flexRowSpaceBetween();
+
+        .leftPart {
+          gap: 18px;
+          @include flexRow();
+
+          .avarta {
+            border: 2px solid #e9e9e9;
+            border-radius: 87px;
+            color: #0d0c10;
+            font-weight: bold;
+            width: 60px;
+            height: 60px;
+            @include flexRowCenter();
+          }
+
+          .user__info__logout {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+
+            .monthlyUser {
+              color: $gray;
+              @include font9();
+            }
+
+            .discordUser {
+              @include font14();
+              color: #121215;
+            }
+
+            .logout {
+              @include flexRow();
+
+              span {
+                color: #ff5959;
+                gap: 4px;
+                @include font11();
+              }
+
+              img {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+        }
+
+        .rightPart {
+          img {
+            width: 29px;
+            height: 29px;
+          }
+        }
+      }
+    }
+
+    .LicenseGroup {
+      flex: 1;
+      padding-right: 83px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+
+      .licensePart,
+      .newPart {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 100%;
+      }
+
+      .License,
+      .NextRenew {
+        color: #ffffff99;
+        @include font9();
+      }
+
+      .LicenseKey {
+        input {
+          background: #ffffff3d;
+          border: 1px solid #ffffff26;
+          border-radius: 4px;
+          color: white;
+          @include font11();
+          padding: 10px 0px 10px 14px;
+          width: 96%;
+
+          &::placeholder {
+            color: white;
+          }
+        }
+      }
+
+      .RemainGroup {
+        @include flexRow();
+        background: #ffffff3d;
+        border: 1px solid #ffffff26;
+        border-radius: 4px;
+        padding: 11px 16px;
+        gap: 15px;
+
+        .remainDay {
+          color: white;
+          @include font11();
+        }
+        .progress {
+          width: 297px;
+          height: 6px;
+          border-radius: 3px;
+          background: #ffffff;
+          display: flex;
+          span {
+            background: #7591e3;
+            border-radius: 3px;
+            width: 114px;
+            height: 6px;
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  .Setting__content {
+    @include flexRow();
+    gap: 14px;
+
+    .generalContent {
+      background: $bgItemConent;
+      border: 2px solid #19181d;
+      padding: 11px 17px;
+      width: 50%;
+      border-radius: 5px;
+    }
+
+    .discordContent {
+      background: $bgItemConent;
+      border: 2px solid #19181d;
+      padding: 11px 17px;
+      flex: 1;
+      border-radius: 5px;
+    }
+
+    .keyHeader {
+      @include flexRowSpaceBetween();
+
+      .Part {
+        @include flexRow();
+        gap: 8px;
+
+        img {
+          background: #242428;
+          border-radius: 4px;
+          padding: 6px;
+          @include flexRowCenter();
+          width: 16px;
+        }
+
+        span {
+          color: #ffffff;
+          @include font11();
+        }
+      }
+
+      .save {
+        @include flexRow();
+        gap: 3px;
+
+        span {
+          color: #90ffbd;
+          @include font11();
+        }
+
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+
+      .tesWebhook {
+        @include flexRow();
+        gap: 3px;
+
+        span {
+          color: #7591e3;
+          @include font11();
+        }
+
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+
+    .inputBox {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+
+      .general {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+      }
+
+      input {
+        background: #1b1b1f;
+        border: 2px solid #19181d;
+        padding: 12px 20px;
+        color: $gray;
+        @include font11();
+        display: flex;
+        width: 100%;
+      }
+    }
+  }
+
+  .setting__footer {
+    @include flexRowSpaceBetween();
+    background: #121215;
+    border-radius: 5px;
+    padding: 11px 17px;
+
+    .updatePart {
+      @include flexRowSpaceBetween();
+
+      .updates {
+        @include flexRow();
+        gap: 8px;
+        img {
+          width: 16px;
+          height: 16px;
+          padding: 6px;
+          background: #242428;
+          border-radius: 4px;
+        }
+
+        span {
+          @include font11();
+          color: white;
+        }
+      }
+
+      .current {
+        @include flexRow();
+        gap: 4px;
+
+        .current__version {
+          @include font11();
+          color: $gray;
+        }
+
+        .beta {
+          @include font11();
+          color: #7591e3;
+        }
+      }
+    }
+
+    .newVersion {
+      @include flexRowSpaceBetween();
+
+      .new {
+        @include flexRow();
+        gap: 5px;
+
+        .new__version {
+          @include font11();
+          color: $gray;
+        }
+
+        .beta {
+          @include font11();
+          color: #7591e3;
+        }
+      }
+    }
+
+    .Downlaod {
+      background: linear-gradient(182.29deg, #929292 0.01%, #878787 100%), linear-gradient(182.29deg, #e74856 0.01%, #b64b54 100%), linear-gradient(0deg, #506ccb, #506ccb);
+      border-radius: 5px;
+      padding: 6px 8px 6px 12px;
+      @include flexRowSpaceBetween();
+      gap: 8px;
+      span {
+        @include font11();
+        color: white;
+      }
+      img {
+        width: 16px;
+        height: 16px;
+        background: #ffffff14;
+        border-radius: 3px;
+        padding: 6px;
+      }
+    }
+    .borderVertical {
+      height: 24px;
+      width: 1px;
+      background: #19181d;
+      display: flex;
+      margin: 0 17px;
+    }
+  }
+  .react-switch-handle {
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 31px;
+    background: #ff5959 !important;
+    display: flex;
+    top: 3px !important;
+    left: 4px;
+  }
+  .switch {
+    position: absolute !important;
+    right: 14px;
+  }
+}

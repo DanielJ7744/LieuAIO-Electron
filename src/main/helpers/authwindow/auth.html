@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Material+Icons&display=swap');
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat';
+      }
+
+      .wrapper {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        /*border-radius: 5px 0px 0px 5px;*/
+      }
+      .login {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+      }
+      .welcomePart {
+        width: 50%;
+        height: 425px;
+        /*border-radius: 5px 0px 0px 5px;*/
+        background: #0d0c10;
+      }
+      .BotSuccess {
+        width: 50%;
+        background: url('./botname.png') no-repeat;
+        background-size: cover;
+        padding: 60px 64px 20px 64px;
+      }
+      .BotSuccess .botname {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        display: flex;
+        align-items: center;
+        color: #ffffff;
+        justify-content: center;
+      }
+      .botContent {
+        padding: 15px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        background: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.25);
+        margin-top: 20px;
+      }
+      .imgs {
+        width: 100%;
+        height: 125px;
+        display: flex;
+        justify-content: center;
+      }
+      .firstBar {
+        background: #e7e7e7;
+        width: 100%;
+        height: 7px;
+        display: flex;
+        border-radius: 3px;
+        margin-top: 17px;
+        margin-bottom: 2px;
+      }
+      .improveSuccess {
+        margin-top: 17px;
+        background: #90ffbd69;
+        border-radius: 5px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 12px;
+        display: flex;
+        align-items: center;
+        color: #439a66;
+        padding: 12px 29px;
+        justify-content: center;
+      }
+      .poweredby {
+        color: #ffffff66;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 9px;
+        line-height: 11px;
+        /* identical to box height */
+
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin-top: 35px;
+      }
+      .secondBar,
+      .thirdBar,
+      .fourthBar {
+        background: #e7e7e7;
+        width: 96%;
+        height: 7px;
+        display: flex;
+        border-radius: 3px;
+        margin-bottom: 2px;
+      }
+      .foreground {
+        background-size: 100%, 100%;
+        background: #0d0c10;
+        /*border-radius: 5px 0px 0px 5px;*/
+      }
+
+      .dragbar {
+        -webkit-app-region: drag;
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-sizing: border-box;
+        padding: 8px;
+        z-index: 3;
+      }
+
+      .window-buttons:hover svg {
+        visibility: visible;
+        display: block;
+      }
+
+      .window-buttons svg {
+        visibility: hidden;
+        width: 12px;
+        height: 12px;
+        display: block;
+      }
+
+      .unfocused .window-button {
+        background-color: #ffffff0f !important;
+      }
+
+      .form__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding: 16px;
+        /*border-radius: 5px 0px 0px 5px;*/
+        height: 425px;
+      }
+      .input__text {
+        display: flex;
+        justify-content: center;
+        font-size: 13px;
+        color: #fff;
+        letter-spacing: 1.1px;
+        font-weight: bold;
+      }
+
+      .input::placeholder {
+        color: #787878;
+      }
+
+      .button {
+        display: flex;
+        background: linear-gradient(182.29deg, #929292 0.01%, #878787 100%), linear-gradient(182.29deg, #e74856 0.01%, #b64b54 100%);
+        border-radius: 4px;
+        justify-content: space-between;
+        border: none;
+        outline: none;
+        padding: 12px 19px;
+        width: 100%;
+        align-items: center;
+        cursor: pointer;
+      }
+      .button span {
+        color: white;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 11px;
+        line-height: 13px;
+        display: flex;
+        align-items: center;
+      }
+
+      .error__text {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ff3c5d;
+        font-weight: bold;
+        font-size: 12px;
+      }
+
+      .logo__welcome {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      .border {
+        background: #19181d;
+        width: 181px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        height: 2px;
+        border-radius: 2px;
+        margin: 27px auto 22px auto;
+      }
+      .EnterLicenseContinue {
+        background: #121215;
+        border: 2px solid #19181d;
+        border-radius: 5px;
+        margin-top: 17px;
+      }
+      .copyright {
+        color: #787878;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 9px;
+        line-height: 11px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 29px;
+      }
+      .enter {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 12px 47px;
+        color: #787878;
+        font-family: Montserrat;
+        font-size: 9px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 11px;
+        letter-spacing: 0em;
+        background: #ffffff0a;
+      }
+      .innerpart {
+        padding: 16px 13px 16px 13px;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+      }
+      .LicenseKey {
+        background: #121215;
+        border: 2px solid #19181d;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+      }
+      .LicenseKey img {
+        background: #ffffff0a;
+        border-radius: 4px;
+        padding: 6px;
+        width: 16px;
+        height: 16px;
+      }
+      .input {
+        background: transparent;
+        padding: 12px;
+        color: #787878;
+        font-family: Montserrat;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-align: left;
+        border: none;
+        outline: none;
+      }
+      .openDashboard {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        justify-content: center;
+        text-align: center;
+        margin: 13px auto 16px auto;
+      }
+      .openDashboard span {
+        color: #7591e3;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 9px;
+        line-height: 11px;
+        display: flex;
+        align-items: center;
+      }
+      .openDashboard img {
+        width: 14px;
+        height: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="dragbar">
+        <div></div>
+      </div>
+      <div class="login">
+        <div class="welcomePart">
+          <div class="foreground">
+            <div class="form__wrapper">
+              <div class="logo__welcome">
+                <img src="./logo.png" alt="logo" />
+                <span class="input__text">LieuAIO</span>
+              </div>
+              <div class="border"></div>
+              <span class="input__text">Welcome to LieuAIO !</span>
+              <div class="EnterLicenseContinue">
+                <span class="enter">Enter your License Key to continue</span>
+                <div class="innerpart">
+                  <div class="LicenseKey">
+                    <img src="./key.png" alt="key" />
+                    <input id="keyField" type="text" class="input" placeholder="License Key" />
+                  </div>
+                  <button id="loginButton" class="button" onclick="sendKey()">
+                    <span>Login</span>
+                    <img src="./loginarrow.png" alt="login-arrow" />
+                  </button>
+                </div>
+
+                <div class="openDashboard">
+                  <span>Open Dashboard</span>
+                  <img src="./opendash.png" alt="open-arrow" />
+                </div>
+              </div>
+              <div class="copyright">Copyright LieuAIO 2022</div>
+
+              <div id="error" class="error__text"></div>
+            </div>
+          </div>
+        </div>
+        <div class="BotSuccess">
+          <div class="botname">The ultimate AIO Bot</div>
+          <div class="botContent">
+            <img src="./botContent.png" alt="bot" class="imgs" />
+            <div class="firstBar"></div>
+            <div class="secondBar"></div>
+            <div class="thirdBar"></div>
+            <div class="fourthBar"></div>
+          </div>
+          <div class="improveSuccess">Improve your success</div>
+          <div class="poweredby">Powered by LieuAIO</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      function sendKey() {
+        const key = document.getElementById('keyField').value.replace(/\s/g, '');
+        window.api.send('login-key', key);
+      }
+
+      window.addEventListener('focus', () => {
+        document.getElementById('window-buttons').classList.remove('unfocused');
+      });
+
+      window.addEventListener('blur', () => {
+        document.getElementById('window-buttons').classList.add('unfocused');
+      });
+    </script>
+  </body>
+</html>
